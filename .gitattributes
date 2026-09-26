@@ -1,0 +1,10 @@
+# Keep the working copy byte-identical to what CI checks out. core.autocrlf gives a Windows working
+# copy CRLF while the Linux runner checks out LF, so Spotless and Prettier, which read the working
+# copy, fail locally on files that pass in CI, and any tool that rewrites a file with LF shows every
+# line of it as changed. Pinning the ending here makes every clone agree, whatever its settings.
+* text=auto eol=lf
+
+# The exception Gradle's own generated attributes make: cmd.exe misreads a batch file's labels and
+# goto targets when its lines end in LF, so gradlew.bat keeps CRLF in every working copy.
+*.bat text eol=crlf
+*.jar binary
