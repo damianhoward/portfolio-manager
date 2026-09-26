@@ -6,10 +6,9 @@ updates:
       interval: "weekly"
     open-pull-requests-limit: 10
     ignore:
-      # Inherited from the shared platform, not declared here. CodeQL no longer caps it
-      # (github/codeql#21938 closed 2026-07-08), but CVE-2026-53914 is fixed in Kotlin 2.4.20,
-      # which has no GA release, and ktlint 1.5.0 cannot run under 2.4.10. Bumped in
-      # build-conventions when both land.
+      # Inherited from the shared platform, not declared here. The Kotlin version belongs to
+      # build-conventions and moves only in a platform release that every repository adopts
+      # together, so a per-repository bump would split the estate across compiler lines.
       - dependency-name: "org.jetbrains.kotlin.jvm"
       # settings.gradle maps these plugin ids to com.github.damianhoward.build-conventions:plugins
       # through an eachPlugin resolutionStrategy. Dependabot does not run that mapping, so it
