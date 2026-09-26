@@ -166,7 +166,7 @@ The test suite runs without network access, exchange credentials, or environment
 
 ## Stack
 
-- Kotlin 2.3.21 (JVM target 25), Java 25 toolchain
+- Kotlin 2.4.20 (JVM target 25), Java 25 toolchain
 - Apache HttpClient 5.6
 - Jackson 2.22 (BOM-managed)
 - Apache Commons Codec / Lang3 / IO
