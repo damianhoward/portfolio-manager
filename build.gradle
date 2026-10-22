@@ -1,5 +1,5 @@
 plugins {
-    id 'com.damianhoward.kotlin-conventions' version '0.5.4'
+    id 'com.damianhoward.kotlin-conventions' version '0.6.0'
     id 'application'
 }
 

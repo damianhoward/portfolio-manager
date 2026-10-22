@@ -10,13 +10,10 @@ updates:
       # build-conventions and moves only in a platform release that every repository adopts
       # together, so a per-repository bump would split the estate across compiler lines.
       - dependency-name: "org.jetbrains.kotlin.jvm"
-      # settings.gradle maps these plugin ids to com.github.damianhoward.build-conventions:plugins
-      # through an eachPlugin resolutionStrategy. Dependabot does not run that mapping, so it
-      # asks JitPack for the plugin-marker coordinate com/damianhoward/... which does not
-      # exist there; JitPack answers 401 for an unknown group and Dependabot reports
-      # private_source_authentication_failure. No credential fixes a coordinate that is not
-      # published — platform bumps are a deliberate estate-wide sweep. Matched by prefix so
-      # that a repository applying a different convention plugin cannot silently miss the entry.
+      # The shared platform. A release moves the convention plugins and the catalog together, and
+      # document 07 adopts it across every repository in one sweep; a bump raised here would move
+      # the plugins alone and leave this repository on a platform no other one runs. Matched by
+      # prefix so that a repository applying a different convention plugin cannot miss the entry.
       - dependency-name: "com.damianhoward.*"
   - package-ecosystem: "github-actions"
     directory: "/"
