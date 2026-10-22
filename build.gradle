@@ -30,8 +30,8 @@ dependencies {
     implementation deps.slf4j.api
     runtimeOnly deps.slf4j.simple
 
-    testImplementation 'org.mockito:mockito-junit-jupiter:5.23.0'
-    testImplementation 'org.mockito:mockito-core:5.23.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.24.0'
+    testImplementation 'org.mockito:mockito-core:5.24.0'
     testImplementation 'org.mockito.kotlin:mockito-kotlin:6.3.0'
     testImplementation deps.hamcrest
 }
