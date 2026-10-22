@@ -23,7 +23,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
     implementation 'com.fasterxml.jackson.core:jackson-annotations'
 
-    implementation 'org.apache.httpcomponents.client5:httpclient5:5.6.4'
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.6.5'
     implementation 'commons-codec:commons-codec:1.23.0'
     implementation deps.commons.lang3
     implementation 'commons-io:commons-io:2.22.0'
