@@ -4,7 +4,9 @@
 # line of it as changed. Pinning the ending here makes every clone agree, whatever its settings.
 * text=auto eol=lf
 
-# The exception Gradle's own generated attributes make: cmd.exe misreads a batch file's labels and
-# goto targets when its lines end in LF, so gradlew.bat keeps CRLF in every working copy.
-*.bat text eol=crlf
+# gradlew.bat is stored exactly as committed, with no conversion. cmd.exe misreads a batch file's
+# labels and goto targets under LF, so it has to reach every working copy with CRLF, and it is
+# committed with CRLF: Dependabot's wrapper bumps write it that way. Converting it, as
+# `text eol=crlf` did, disagreed with those blobs, and every Windows clone showed it as modified.
+*.bat -text
 *.jar binary
